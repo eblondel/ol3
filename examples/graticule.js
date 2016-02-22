@@ -23,17 +23,21 @@ var map = new ol.Map({
 
 // Create the graticule component
 var graticule = new ol.Graticule({
+  
   // the style to use for the lines, optional.
   strokeStyle: new ol.style.Stroke({
     color: 'rgba(255,120,0,0.9)',
     width: 2,
     lineDash: [0.5, 4]
   }),
+  
   //show labels
   showLabels : true,
+	
 	//label positions
-	lonLabelPosition: 5,
-	latLabelPosition: 5,
+	lonLabelPosition: 0.05,
+	latLabelPosition: 0.95,
+	
 	//style for longitude label
 	lonLabelStyle: new ol.style.Text({
 			font: '10px Verdana',
@@ -41,6 +45,7 @@ var graticule = new ol.Graticule({
 				color: 'rgba(0,0,0,1)'
 			})
 	}),
+	
 	//style for latitude label
 	latLabelStyle: new ol.style.Text({
 			font: '10px Verdana',
